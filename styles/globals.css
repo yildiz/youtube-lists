@@ -62,3 +62,6 @@ a {
 	background-color: var(--red-color);
 	z-index: 99998 !important;
 }
+#nprogress .peg {
+	box-shadow: 0 0 10px var(--red-color), 0 0 5px var(--red-color);
+}

@@ -2,7 +2,7 @@
 // that's not the point of this demo.
 export default async (req, res) => {
 	await new Promise((resolve) => {
-		setTimeout(resolve, 10000);
+		setTimeout(resolve, 2000);
 	});
 
 	res.setHeader(
