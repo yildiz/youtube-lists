@@ -3,7 +3,7 @@ import Router from 'next/router';
 
 const BASE_URLS = {
 	development: 'http://localhost:3000/api/',
-	production: 'http://localhost',
+	production: 'https://youtube-lists.vercel.app/',
 };
 
 const api = Axios.create({
