@@ -48,52 +48,43 @@ function Page() {
 	};
 
 	return (
-		<div>
-			<Head>
-				<title>Giriş</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<Layout>
-				<Title>Giriş Yap</Title>
-				<div
-					className={'section'}
+		<Layout title="Login">
+			<Title>Giriş Yap</Title>
+			<div
+				className={'section'}
+				style={{
+					display: 'flex',
+					flexDirection: 'row',
+				}}>
+				<form
+					onSubmit={handleFormSubmit}
 					style={{
-						display: 'flex',
-						flexDirection: 'row',
+						// display: 'flex',
+						// flexDirection: 'column',
+						width: '50rem',
+						// alignContent: 'flex-start',
+						// alignSelf: 'flex-start',
 					}}>
-					<form
-						onSubmit={handleFormSubmit}
-						style={{
-							// display: 'flex',
-							// flexDirection: 'column',
-							width: '50rem',
-							// alignContent: 'flex-start',
-							// alignSelf: 'flex-start',
-						}}>
-						<FormGroup>
-							<FormText>Kullanıcı adı:</FormText>
-							<InputText
-								name="username"
-								placeholder={'username'}
-								autoFocus
-							/>
-						</FormGroup>
-						<FormGroup>
-							<FormText>Parola:</FormText>
-							<InputText
-								name="password"
-								placeholder={'password'}
-							/>
-						</FormGroup>
-						<FormGroup>
-							<Button buttonType="button" type="submit">
-								GİRİŞ YAP
-							</Button>
-						</FormGroup>
-					</form>
-				</div>
-			</Layout>
-		</div>
+					<FormGroup>
+						<FormText>Kullanıcı adı:</FormText>
+						<InputText
+							name="username"
+							placeholder={'username'}
+							autoFocus
+						/>
+					</FormGroup>
+					<FormGroup>
+						<FormText>Parola:</FormText>
+						<InputText name="password" placeholder={'password'} />
+					</FormGroup>
+					<FormGroup>
+						<Button buttonType="button" type="submit">
+							GİRİŞ YAP
+						</Button>
+					</FormGroup>
+				</form>
+			</div>
+		</Layout>
 	);
 }
 

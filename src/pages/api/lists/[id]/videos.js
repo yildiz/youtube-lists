@@ -4,7 +4,7 @@ export default async (req, res) => {
 	const { query } = req;
 
 	await new Promise((resolve) => {
-		setTimeout(resolve, 3000);
+		setTimeout(resolve, 500);
 	});
 
 	res.statusCode = 200;

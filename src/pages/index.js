@@ -54,19 +54,9 @@ function Videos() {
 
 function Home() {
 	return (
-		<div>
-			<Head>
-				<title>index</title>
-				<link rel="icon" href="/favicon.ico" />
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0"
-				/>
-			</Head>
-			<Layout>
-				<Videos data={'data'} />
-			</Layout>
-		</div>
+		<Layout title="Home">
+			<Videos data={'data'} />
+		</Layout>
 	);
 }
 
