@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import Router from 'next/router';
+import NProgress from 'nprogress';
 
 const BASE_URLS = {
 	development: 'http://localhost:3000/api/',
@@ -31,5 +32,7 @@ export const addBearerToken = (token) => {
 export const removeBearerToken = () => {
 	delete api.defaults.headers.Authorization;
 };
+
+export const NPS = NProgress;
 
 export default api;

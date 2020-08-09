@@ -14,6 +14,8 @@
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",
     "next": "9.5.1",
+    "next-nprogress": "^1.4.0",
+    "nprogress": "^0.2.0",
     "postcss-nested": "^4.2.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",

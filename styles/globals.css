@@ -54,3 +54,10 @@ a {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+
+#nprogress {
+	z-index: 99999;
+}
+#nprogress .bar {
+	z-index: 99998 !important;
+}

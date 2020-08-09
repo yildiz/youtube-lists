@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
 
+// import api, { NPS as NProgress } from '@api/api';
+import NProgress from 'nprogress';
 import api from '@api/api';
 import withoutAuth from '@hocs/withoutAuth';
 import { useAuth } from '@providers/Auth';
@@ -20,7 +22,10 @@ function Page() {
 	const { setAuthenticated } = useAuth();
 
 	const handleFormSubmit = (e) => {
+		NProgress.start();
 		e.preventDefault();
+		// debugger;
+
 		const username = e.target.elements['username'].value;
 		const password = e.target.elements['password'].value;
 
@@ -34,6 +39,7 @@ function Page() {
 				} else {
 					console.error('Login error', response);
 				}
+				// NProgress.done();
 			})
 			.catch((error) => {
 				// setErrors(error.response.data || []);
