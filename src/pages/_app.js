@@ -10,8 +10,8 @@ import cookie from 'cookie';
 import { AuthProvider } from '@providers/Auth';
 // import { NPS as NProgress } from '@api/api';
 
-import '../../styles/globals.css';
 import 'nprogress/nprogress.css';
+import '../../styles/globals.css';
 
 NProgress.configure({ showSpinner: false, trickleSpeed: 200 });
 

@@ -59,5 +59,6 @@ a {
 	z-index: 99999;
 }
 #nprogress .bar {
+	background-color: var(--red-color);
 	z-index: 99998 !important;
 }
