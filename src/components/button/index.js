@@ -16,7 +16,6 @@ export function LinkButton({
 	children,
 	multi,
 }) {
-	console.log(icon);
 	return (
 		<Link href={href}>
 			<a
