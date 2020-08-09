@@ -1,0 +1,74 @@
+.button {
+	border: none;
+	outline: none;
+	margin: 0;
+	text-align: center;
+	
+	border-radius: 2px;
+	height: 36px;
+	/* display: flex; */
+	display: inline-block;
+
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	/* flex-grow: 1; */
+
+	font-size: 1.4rem;
+	font-weight: 500;
+	letter-spacing: 0.007px;
+	margin-right: 8px;
+	text-size-adjust: 100%;
+	white-space: nowrap;
+	cursor: pointer;
+	padding: 10px 16px;
+	& > svg {
+		/* margin-right: 10px; */
+	}
+}
+
+.gray {
+	background-color: var(--gray-button-background-color);
+	color: var(--gray-text-color);
+}
+.blue {
+	background-color: var(--button-blue-color);
+	color: var(--text-color) !important;
+}
+.green {
+	background-color: var(--green-color);
+	color: var(--black-text-color);
+}
+.red {
+	background-color: var(--red-color);
+	color: var(--text-color);
+}
+.transparent {
+	background-color: transparent;
+	color: var(--gray-text-color);
+}
+
+.linkButton {
+	display: flex;
+}
+
+
+
+.border-gray {
+	border: 1px solid var(--gray-text-color);
+	color: var(--gray-text-color);
+}
+.border-white {
+	border: 1px solid var(--text-color);
+	color: var(--text-color);
+}
+
+.border-blue {
+	border: 1px solid var(--button-blue-color);
+	color: var(--button-blue-color);
+}
+
+
+.text-white {
+	color: var(--text-color);
+}

@@ -1,0 +1,35 @@
+.sidebar {
+	width: 12.5%;
+	padding: 12px 0;
+	height: auto;
+
+	position: fixed;
+    overflow-y: scroll;
+    top: 56px;
+	bottom: 0;
+	
+	background: var(--aside-navbar-background);
+}
+
+.item {
+	width: 100%;
+	padding: 8px 24px;
+	display: flex;
+	align-items: center;
+	color: #fff;
+}
+
+.item.active {
+	color: #fff;
+	background: var(--aside-active-background);
+}
+
+.item svg {
+	margin-right: 24px;
+}
+
+.itemText {
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+}

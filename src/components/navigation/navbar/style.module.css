@@ -1,0 +1,23 @@
+.navbarContainer {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2020;
+    transform: translateY(0);
+	transition: transform 0.3s ease;
+}
+.navbar {
+	height: 56px;
+	background-color: var(--aside-navbar-background);
+	padding: 0 23px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;	
+}
+
+.navbarItem {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}

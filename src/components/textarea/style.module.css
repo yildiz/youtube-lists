@@ -1,0 +1,14 @@
+.input {
+	background-color: #131313;
+	border: 1px solid #303030;
+	color: rgba(255, 255, 255, 0.88);
+	padding: 3px 10px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 24px;
+	/* margin-left: 4px; */
+	min-width: 100%;
+	outline: none;
+	text-align: inherit;
+	width: 100%;
+}
