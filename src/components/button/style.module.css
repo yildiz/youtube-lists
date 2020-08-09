@@ -22,15 +22,33 @@
 	white-space: nowrap;
 	cursor: pointer;
 	padding: 10px 16px;
+	transition: background 0.05s;
 	& > svg {
 		/* margin-right: 10px; */
 	}
 }
 
+
+/* .button:hover {
+	background: rgba(255, 255, 255, 0.05) radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.05) 1%) center/15000%;
+} */
+/* .button:active {
+	background-color: rgba(255, 255, 255, 0.1));
+	background-size: 100%;
+	transition: background 0s;
+} */
+
 .gray {
 	background-color: var(--gray-button-background-color);
 	color: var(--gray-text-color);
+	&:hover {
+		/* background: rgba(255, 255, 255, 0.05) radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.05) 1%) center/15000%; */
+		background: rgba(255, 255, 255, 0.2);
+	}
 }
+
+
+
 .blue {
 	background-color: var(--button-blue-color);
 	color: var(--text-color) !important;

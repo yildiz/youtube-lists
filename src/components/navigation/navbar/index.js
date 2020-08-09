@@ -38,7 +38,7 @@ export default function Video() {
 							{user?.name}
 						</LinkButton>
 						<LinkButton href={'/logout'} color="gray" mr={10}>
-							ÇIKIŞ
+							OTURUMU KAPAT
 						</LinkButton>
 					</div>
 				) : (
