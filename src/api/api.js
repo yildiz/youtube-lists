@@ -13,10 +13,29 @@ const api = Axios.create({
 		Accept: 'application/json',
 		'Content-Type': 'application/json',
 	},
+	withCredentials: true, // TODO: https://stackoverflow.com/questions/43002444/make-axios-send-cookies-in-its-requests-automatically
 });
 
+//
+// api.interceptors.request.use(
+// 	function (config) {
+// 		// Do something before request is sent
+// 		NProgress.start();
+// 		return config;
+// 	},
+// 	function (error) {
+// 		// Do something with request error
+// 		return Promise.reject(error);
+// 	},
+// );
+
+//
+
 api.interceptors.response.use(
-	(response) => response,
+	// (response) => response,
+	function (response) {
+		return response;
+	},
 	function (error) {
 		if (401 === error.response.status) {
 			Router.push('/login');

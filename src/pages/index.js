@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import useSWR from 'swr';
 
+import NProgress from 'nprogress';
+
 import api from '@api/api';
 import Video, { VideoPlaceholder } from '@components/video';
 import Layout from '@components/navigation/layout';
@@ -14,9 +16,12 @@ function Videos() {
 
 	useEffect(() => {
 		const getList = async () => {
+			await NProgress.start();
+			// await NProgress.set(0.2);
 			// const { data, error } = useSWR('/lists/1/videos', api);
 			const res = await api.get('/lists/1/videos');
 			setData(res?.data);
+			await NProgress.done();
 		};
 		getList();
 	}, []);
