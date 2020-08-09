@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Head from 'next/head';
 import useSWR from 'swr';
@@ -10,7 +10,16 @@ import { Title } from '@components/text';
 // import Video from '../components/video'
 
 function Videos() {
-	const { data, error } = useSWR('/lists/1/videos', api);
+	const [data, setData] = useState(null);
+
+	useEffect(() => {
+		const getList = async () => {
+			// const { data, error } = useSWR('/lists/1/videos', api);
+			const res = await api.get('/lists/1/videos');
+			setData(res?.data);
+		};
+		getList();
+	}, []);
 
 	const placeholderCount = 8;
 
@@ -26,8 +35,7 @@ function Videos() {
 		);
 	}
 
-	const respnose = data?.data;
-	const list = respnose;
+	const list = data;
 	const videos = list?.videos;
 
 	return (
@@ -48,8 +56,12 @@ function Home() {
 	return (
 		<div>
 			<Head>
-				<title>Create Next App</title>
+				<title>index</title>
 				<link rel="icon" href="/favicon.ico" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0"
+				/>
 			</Head>
 			<Layout>
 				<Videos data={'data'} />
