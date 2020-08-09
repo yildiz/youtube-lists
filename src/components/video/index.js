@@ -33,7 +33,7 @@ export function VideoPlaceholder() {
 				<ReactPlaceholder
 					showLoadingAnimation={true}
 					type="text"
-					rows={2}
+					rows={3}
 					color="var(--video-placeholder-background)"
 					ready={false}
 					style={{
@@ -41,7 +41,7 @@ export function VideoPlaceholder() {
 						flexDirection: 'column',
 						alignSelf: 'center',
 						justifyContent: 'center',
-						width: 150,
+						width: '50%',
 					}}
 				/>
 			</div>
