@@ -16,8 +16,8 @@ function Videos() {
 
 	useEffect(() => {
 		const getList = async () => {
+			// TODO: buradaki nprogress sadece sayfa ilk açıldığında çalışıyor. sorunu çözmek için _app.js veya buradan bir yol bul.
 			await NProgress.start();
-			// await NProgress.set(0.2);
 			// const { data, error } = useSWR('/lists/1/videos', api);
 			const res = await api.get('/lists/1/videos');
 			setData(res?.data);
