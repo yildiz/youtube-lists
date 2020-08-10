@@ -9,6 +9,24 @@
 	bottom: 0;
 	
 	background: var(--aside-navbar-background);
+
+}
+
+.sidebarToggle {
+	width: auto;
+}
+
+.toggleMenu {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	& .itemText {
+		font-size: 1rem !important;
+		line-height: 1.4rem;
+	}
 }
 
 .item {
@@ -17,15 +35,45 @@
 	display: flex;
 	align-items: center;
 	color: #fff;
+	& > svg {
+		color: var(--aside-inactive-text-color);
+	}
 }
 
-.item.active {
+.item.toggle {
+	color: var(--aside-inactive-text-color);
+	/* padding: 16px 12px 16px 12px; */
+	padding: 8px 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.item.active, .item:not(.toggle):hover {
+	color: #fff;
+	padding: 8px 24px;
+	background: var(--aside-active-background);
+}
+
+.item.toggle.active {
+	background-color: transparent;
+}
+.item:hover {
 	color: #fff;
 	background: var(--aside-active-background);
 }
 
+.item.active > svg {
+	color: #fff;
+}
+
+/* .item:not(.sidebar.toggle) svg { */
 .item svg {
 	margin-right: 24px;
+}
+
+.sidebarToggle .item svg {
+	margin-right: 0;
 }
 
 .itemText {

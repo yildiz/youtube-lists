@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import styles from './style.module.css';
 import classnames from 'classnames';
 
@@ -10,17 +11,22 @@ import { useAuth } from '@providers/Auth';
 import { LinkButton } from '@components/button';
 import Text from '@components/text';
 
-export default function Video() {
+export default function NavBar({ changeStatus }) {
 	const { user, isAuthenticated } = useAuth();
+
+	const handleToggleSidebar = () => changeStatus();
+
 	return (
 		<div className={styles.navbarContainer}>
 			<div className={styles.navbar}>
 				<div className={styles.navbarItem}>
-					<Menu
-						width={24}
-						height={24}
-						style={{ color: '#fff', marginRight: 23 }}
-					/>
+					<div onClick={handleToggleSidebar}>
+						<Menu
+							width={24}
+							height={24}
+							style={{ color: '#fff', marginRight: 23 }}
+						/>
+					</div>
 					<Logo width={80} height={24} style={{ color: '#fff' }} />
 				</div>
 				<div

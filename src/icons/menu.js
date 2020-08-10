@@ -6,13 +6,12 @@ function SvgComponent(props) {
 			viewBox="0 0 24 24"
 			className="prefix__style-scope prefix__yt-icon"
 			style={{
-				width: '100%',
-				height: '100%'
+				width: props.width + 'px',
+				height: props.height + 'px',
 			}}
 			pointerEvents="none"
 			display="block"
-			{...props}
-		>
+			{...props}>
 			<g className="prefix__style-scope prefix__yt-icon">
 				<path
 					fill="currentColor"

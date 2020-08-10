@@ -10,6 +10,7 @@
 			"@api/*": ["src/api/*"],
 			"@hocs/*": ["src/hocs/*"],
 			"@providers/*": ["src/providers/*"],
+			"@hooks/*": ["src/hooks/*"],
 		}
 	}
 }

@@ -57,7 +57,8 @@ function Videos() {
 	);
 }
 
-function Home() {
+function Home(props) {
+	console.log('props', props);
 	return (
 		<Layout title="Home">
 			<Videos data={'data'} />

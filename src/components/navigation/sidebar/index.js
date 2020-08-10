@@ -22,7 +22,7 @@ const SIDE_MENU_ITEMS = [
 	{ text: 'NavbarItem', path: '/a' },
 ];
 
-function Item({ text, path }) {
+function Item({ text, path, toggle }) {
 	const router = useRouter();
 	// console.log(router);
 
@@ -31,36 +31,48 @@ function Item({ text, path }) {
 		// active = true;
 	}
 
-	let active = router.pathname === path;
+	let isLinkActive = router.pathname === path;
 
 	// if (path.split('/')[1] == router.pathname) {
 	if (path.split('/')[1] == router.pathname.split('/')[1]) {
 		// active = true;
 	}
 
+	console.log('Item', toggle);
 	return (
 		<Link href={path}>
-			<a className={classnames(styles.item, active && styles.active)}>
-				<Menu
-					width={24}
-					height={24}
-					style={{
-						color: active
-							? 'var(--primary-text-color:)'
-							: 'var(--aside-inactive-text-color)',
-					}}
-				/>
-				<span className={styles.itemText}>{text}</span>
+			<a
+				className={classnames(
+					styles.item,
+					isLinkActive && styles.active,
+					toggle && styles.toggle,
+				)}>
+				{!toggle ? (
+					<>
+						<Menu width={24} height={24} />
+						<span className={styles.itemText}>{text}</span>
+					</>
+				) : (
+					<div className={styles.toggleMenu}>
+						<Menu width={24} height={24} />
+						<span className={styles.itemText}>{text}</span>
+					</div>
+				)}
 			</a>
 		</Link>
 	);
 }
 
-function Sidebar({ children }) {
+function Sidebar({ toggle, children }) {
+	console.log('Sidebar', toggle);
 	return (
-		<aside className={styles.sidebar}>
+		<aside
+			className={classnames(
+				styles.sidebar,
+				toggle && styles.sidebarToggle,
+			)}>
 			{SIDE_MENU_ITEMS.map((item, key) => (
-				<Item {...item} key={key} />
+				<Item {...item} key={key} toggle={toggle} />
 			))}
 		</aside>
 	);
