@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react';
 
 import Head from 'next/head';
+
+import classnames from 'classnames';
+
 import Navbar from '@components/navigation/navbar';
 import Sidebar from '@components/navigation/sidebar';
 import useSidebar from '@hooks/useSidebar2';
+
+import styles from './style.module.css';
 
 export default function Layout({ title = 'Page', children }) {
 	const { isSidebarActive, setIsSidebarActive, changeStatus } = useSidebar();
@@ -30,11 +35,18 @@ export default function Layout({ title = 'Page', children }) {
 				/>
 			</Head>
 			<Navbar changeStatus={handleToggleSidebar} />
-			<div className="content" style={{ marginTop: 56, display: 'flex' }}>
+			<div
+				className={'content'}
+				// className={'content ' + (isSidebarActive ? 'deneme' : '')}
+				style={{ marginTop: 56, display: 'flex' }}>
 				{/* {isSidebarActive && <Sidebar />} */}
 				<Sidebar toggle={isSidebarActive} />
 				<main
-					onClick={handleToggleSidebar}
+					className={classnames(
+						styles.main,
+						isSidebarActive && styles.toggled,
+					)}
+					// onClick={handleToggleSidebar}
 					style={{
 						flex: 1,
 						overflow: 'auto',

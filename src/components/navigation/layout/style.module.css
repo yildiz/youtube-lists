@@ -1,0 +1,7 @@
+.main {
+	/* background-color: red; */
+	/* buna bi çözüm bulsam iyi olur */
+	&.toggled :nth-child(2) div {
+		max-width: 320px;
+	}
+}
