@@ -8,14 +8,15 @@ export default function useSidebar() {
 	useEffect(() => {
 		changeStatus(local);
 		return () => {
-			changeStatus(local); // null olabilir
+			// changeStatus(local); // null olabilir
 		};
 	}, []);
 
 	useEffect(() => {
+		console.log('8888', 8888);
 		changeStatus(local);
 		return () => {
-			changeStatus(null);
+			// changeStatus(null);
 		};
 	}, [isSidebarActive]);
 
