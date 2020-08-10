@@ -39,7 +39,8 @@ export default function Layout({ title = 'Page', children }) {
 						flex: 1,
 						overflow: 'auto',
 						padding: 20,
-						marginLeft: '16.5%',
+						// marginLeft: !isSidebarActive ? '16.5%' : '7.5%',
+						marginLeft: !isSidebarActive ? '15%' : '7.5%',
 					}}>
 					{children}
 				</main>

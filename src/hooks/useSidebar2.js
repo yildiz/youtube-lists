@@ -13,7 +13,6 @@ export default function useSidebar() {
 	}, []);
 
 	useEffect(() => {
-		console.log('8888', 8888);
 		changeStatus(local);
 		return () => {
 			// changeStatus(null);
@@ -21,7 +20,7 @@ export default function useSidebar() {
 	}, [isSidebarActive]);
 
 	const changeStatus = (state) => {
-		console.log('run', isSidebarActive, '=>', state);
+		// console.log('changeStatus', isSidebarActive, '=>', state);
 		setLocal(state);
 		setIsSidebarActive(state);
 	};
